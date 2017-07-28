@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+	<ui:composition template="/WEB-INF/template.xhtml">
+	<ui:define name="title"> အကျိုးဆောင်</ui:define>
+	<ui:define name="content">
+		<div class="btn btn-floating"><i class="material-icons prefix">domain</i> </div>
+		<span class="fs22" >အကျိုးဆောင်တင်ရန်</span>
+		<div class="divider MarTop10"></div>
+		
+		<div class="row MarTop20">
+			<div class="input-field col s11">
+				<i class="material-icons prefix">person_outline</i>
+				<select>
+					<option>မရှိ</option>
+					<option>စိုးစံ</option>						
+				</select>
+				<label for="icon_prefix">အိမ်ခြံမြေအကျိုးဆောင်ရွေးရန်</label>
+			</div>			
+			<div class="input-field col s1">								
+				<a href="#" id="showHide" class="right MarTop10 btn btn-floating green lighten-2"><i class="fa fa-plus"></i> </a>				
+			</div>
+													
+			<h:form id="addForm" styleClass="row MarTop10 hide clearfix">		
+			<div class="input-field col s12">	
+				<div class="input-field col s12 MarRight10">								
+					<span class="fs22" >အိမ်ခြံမြေအကျိုးဆောင်အသစ်ထည့်ရန်</span>
+				</div>
+				<div class="input-field col s6">
+					<i class="material-icons prefix">person_outline</i>
+					<label>နာမည်</label>
+					<h:inputText value="" />
+				</div>
+				<div class="input-field col s6">
+					<i class="material-icons prefix">phone</i>
+					<label>ဖုန်း</label>
+					<h:inputText value="" />
+				</div>
+				<div class="input-field col s12">
+					<i class="material-icons prefix">place</i>
+					<label>လိပ်စာ</label>
+					<h:inputText value="" />
+				</div>
+			</div>
+			</h:form>
+			<h:form>
+			<h:commandButton action="information" value="ရှေ့စာမျက်နှာ" styleClass="btn btn-block MarTop20 pull-right"/>
+			</h:form>
+		</div>
+			
+		<script>				
+			$('#showHide').click(function() {
+				if($('#addForm').hasClass('hide')) {
+					$('#addForm').removeClass('hide');
+				} else {
+					$('#addForm').addClass('hide');
+				}
+			});
+		</script>
+	</ui:define>
+	</ui:composition>
+</html>

@@ -15,8 +15,10 @@
 			<!-- Search Form -->
 			<div class="card white hoverable">
 				<div class="card-content green lighten-4">
-					<span class="card-title">အရောင်း - အငှား ရှာဖွေရန်</span>
-					<h:link rendered="#{loginUser.role eq 'Member'}" outcome="/member/properties-edit" styleClass="btn btn-floating right green darken-3"><i class="material-icons">add</i></h:link>
+					<span class="card-title">အရောင်း - အငှား ရှာဖွေရန်</span>					
+					<h:form>
+						<h:commandLink rendered="#{loginUser.role eq 'Member'}" styleClass="btn btn-floating right green darken-3" action="salerent"><i class="material-icons">add</i></h:commandLink>
+					</h:form>
 				</div>
 				<div class="card-content">
 					<h:form>
