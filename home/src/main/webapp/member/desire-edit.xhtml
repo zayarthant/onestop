@@ -3,14 +3,95 @@
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:h="http://java.sun.com/jsf/html">
-
+	
 	<ui:composition template="/WEB-INF/template.xhtml">
 		<ui:define name="title">
-			အသေးစိတ်
+			အရောင်း-အငှားကြော်ငြာတင်ရန်
 		</ui:define>
 		
 		<ui:define name="content">
-		
+					<div class="btn btn-floating MarRight10"><i class="material-icons">domain</i></div>
+					<span class="fs22" >အရောင်း-အငှားကြော်ငြာတင်ရန်
+					</span>
+					<div class="divider MarTop10"></div>
+					<div class="row MarTop20">
+						<div class="input-field col l6 s12">
+							<i class="material-icons prefix">location_city</i>
+							<select>
+								<option>တိုက်ခန်း</option>
+								<option>လုံးချင်းအိမ်</option>
+								<option>မြေကွက်</option>
+								<option>လယ်ယာမြေ</option>
+							</select>
+							<label for="icon_prefix">အိမ်ခြံမြေအမျိုးအစား</label>
+						</div>
+						<div class="input-field col l6 s12">
+							<i class="material-icons prefix">swap_vertical_circle</i>
+							<select>
+								<option>ရောင်းလိုသည်</option>
+								<option>ငှားလိုသည်</option>
+							</select>
+							<label>ဝယ်ရန်/ငှါးရန်</label>
+						</div>
+						<div class="input-field col l6 s12">
+							<i class="material-icons prefix">map</i>
+							<select>
+								<option>ရန်ကုန်</option>
+							</select>
+							<label>တိုင်းဒေသကြီး</label>
+						</div>
+						<div class="input-field col l6 s12">
+							<i class="material-icons prefix">map</i>
+							<select>
+								<option>ဒဂုံ</option>
+							</select>
+							<label>မြို့နယ်</label>
+						</div>
+						<div class="input-field col l6 s12">
+							<i class="material-icons prefix">straighten</i>
+							<select>
+								<option>စတုရန်းပေ၁၀၀</option>
+								<option>စတုရန်းပေ၂၀၀</option>
+								<option>စတုရန်းပေ၃၀၀</option>
+								<option>စတုရန်းပေ၄၀၀</option>
+								<option>စတုရန်းပေ၅၀၀</option>
+								<option>စတုရန်းပေ၁၀၀၀အထက်</option>
+							</select>
+							<label>အရွယ်အစား</label>
+						</div>
+						<div class="input-field col l6 s12">
+							<i class="material-icons prefix">timer_off</i>
+							<h:inputText type="date" class="datepicker"/>
+							<label>နောက်ဆုံးရက်</label>
+						</div>
+						<div class="input-field col l6 s12">
+							<i class="material-icons prefix">attach_money</i>
+							<label>အနိမ့်ဆုံးဈေး (သိန်း)</label>
+							<h:inputText value="" />
+						</div>
+						<div class="input-field col l6 s12">
+							<i class="material-icons prefix">attach_money</i>
+							<label>အမြင့်ဆုံးဈေး (သိန်း)</label>
+							<h:inputText value="" />
+						</div>
+						<div class="input-field col s12">
+							<i class="material-icons prefix">message</i>
+							<label>မှတ်ချက်</label>
+							<h:inputTextarea value="" styleClass="materialize-textarea"></h:inputTextarea>
+						</div>
+						<div class="right MarTop10">
+							<h:link value="မတင်သေးပါ" outcome="/public/desire-list" styleClass="btn red lighten-2 MarRight10"/>
+							<h:link value="တင်မည်" outcome="/public/desire-list" styleClass="btn MarRight10 cyan" />
+						</div> 
+					</div>
+				<script>
+					$(function(){
+						$('.datepicker').pickadate({
+							selectMonth:true,
+							selectYear:3
+						});
+					});
+				</script>	
 		</ui:define>
 	</ui:composition>
 </html>

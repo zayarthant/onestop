@@ -11,16 +11,81 @@
 		</ui:define>
 		
 		<ui:define name="content">
-			<!-- Title -->
-			<!-- From / To -->	
-			<!-- Send Date -->
-					
-			<!-- Question Details -->
-
-			<!-- Properties -->			
-			<home:result-item-sell></home:result-item-sell>
-			
-			<!-- Replies -->
+				<div class="">
+					<div class="row">
+						<div class="col s12 message-item">
+							<div class="message-title">
+								<!-- Title -->
+								<span class="fs18">အောက်ပါ တိုက်ခန်းကို လိုက်ကြည့်လို့ရမလား</span>
+							</div>
+							<div>
+								<!-- Question Details -->
+								<span class="fs18 grey-text">အင်းစိန်လမ်းမကြီး ပေါ်မှာလား၊ဈေးနှုန်းရော အလျှော့အတင်းရှိလားဗျ</span>
+							</div>
+							<div class="MarTop20  controls">
+								<!-- From / To -->	
+								<span class="chip">ကိုအောင်နိုင်</span>
+								<!-- Send Date -->
+								<span class="chip">၂၀၁၇ခု ၇လ ၁၈ရက်</span>
+							</div>
+						</div>
+					</div>
+					<!-- Properties -->
+					<div class="MarTop20 MarBot10">
+						<h:outputLabel value="အိမ်အမျိုးအစား" styleClass="fs18"/>	
+						<div class="divider MarTop10"></div>
+						<home:result-item-sell></home:result-item-sell>
+					</div>	
+					<!-- Replies -->
+					<div class="MarTop20">
+						<h:outputLabel value="မှတ်ချက်များ" styleClass="fs18"/>
+						<a href="#messageModal" class="btn btn-floating green white-text modal-trigger right">
+							<i class="material-icons">add</i>
+						</a>
+						<div class="divider MarTop20"></div>	
+						<div class="row MarTop20">
+								<div class="col s1 center-align">
+									<i class="material-icons fs30 MarRight10">announcement</i>
+								</div>
+								<div class="col s11 message-item">
+									<div class="message-title">
+										<span>ရန်ကုန်တိုင်း၊ ကမာရွတ်မြို့နယ်၊ အင်းစိန်လမ်းမကြီး ပေါ်မှာပါ</span>
+										<span class="right grey-text">၂၀၁၇ခု ၆လ ၁၈ရက်</span>
+									</div>
+									<div>
+										<span class="fs12 grey-text">ကိုမောင်မောင်</span>
+									</div>
+								</div>
+							</div>
+							<div class="divider"></div>
+					</div>
+				</div>
+		<div id="messageModal" class="modal bottom-sheet green lighten-4">
+			<div class="row">
+				<div class="col offset-l2 l8 ">
+					<div class="modal-content">
+						<h4>မှတ်ချက်ပေးမည်</h4>
+						<h:form>
+							<div class="input-field">
+								<label>အကြောင်းအရာ</label>
+								<h:inputTextarea styleClass="materialize-textarea" value="" />
+							</div>
+						</h:form>
+					</div>
+					<div class="modal-footer green lighten-4">
+						<a href="#!"
+							class=" modal-action modal-close waves-effect waves-green btn-flat">ပိတ်မည်</a>
+						<a href="#!"
+							class=" modal-action modal-close waves-effect waves-green btn-flat">မေးမည်</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			$(function() {
+				$('.modal').modal();
+			});
+		</script>
 		</ui:define>
 	</ui:composition>
 </html>

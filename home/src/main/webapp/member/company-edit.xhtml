@@ -6,11 +6,108 @@
 
 	<ui:composition template="/WEB-INF/template.xhtml">
 		<ui:define name="title">
-			အသေးစိတ်
+			အကျိုးဆောင်
 		</ui:define>
 		
 		<ui:define name="content">
-		
+			<div class="btn btn-floating MarRight10"><i class="material-icons">domain</i></div>
+					<span class="fs22" >အကျိုးဆောင်အသစ်တင်ရန်</span>
+					<div class="divider MarTop10"></div>
+					<div class="row MarTop20">
+						<div class="input-field col s12">
+							<i class="material-icons prefix">folder_shared</i>
+							<label>အကျိုးဆောင်နာမည်</label>
+							<h:inputText value="" />
+						</div>
+						<div class="input-field col l6 s12">
+							<i class="material-icons prefix">open_in_new</i>
+							<h:inputText type="date" class="datepicker"/>
+							<label>စတင်သည့်ခုနှစ်</label>
+						</div>
+						<div class="input-field col l6 s12">
+							<i class="material-icons prefix">assignment</i>
+							<select>
+								<option>ဆောက်လုပ်ရေးကုမ္ပဏီ</option>
+								<option>အကျိုးဆောင်ကုမ္ပဏီ</option>
+								<option>ဒေသခံပွဲစား</option>
+								<option>ကိုယ်ပိုင် အကျိုးဆောင်</option>
+								<option>အခြား</option>
+							</select>
+							<label>အမျိုးအစား</label>
+						</div>
+						<div class="input-field col l6 s12">
+							<i class="material-icons prefix">map</i>
+							<select>
+								<option>ရန်ကုန်</option>
+							</select>
+							<label>တိုင်းဒေသကြီး</label>
+						</div>
+						<div class="input-field col l6 s12">
+							<i class="material-icons prefix">map</i>
+							<select>
+								<option>ဒဂုံ</option>
+							</select>
+							<label>မြို့နယ်</label>
+						</div>
+						
+						<div class="input-field col l6 s9">
+							<i class="material-icons prefix">dialer_sip</i>
+							<label>ဖုန်းနံပါတ်</label>
+							<h:inputText value="" />
+						</div>
+						<div class="input-field col l6 s3">
+							<a href="#messageModal" class="btn btn-floating green white-text modal-trigger">
+								<i class="material-icons">add</i>
+							</a>
+						</div>
+						<div class="input-field col s12">
+							<i class="material-icons prefix">beenhere</i>
+							<label>ဆောင်ပုဒ်</label>
+							<h:inputText value="" />
+						</div>
+						<div class="input-field col s12">
+							<i class="material-icons prefix">place</i>
+							<label>လိပ်စာအပြည့်အစုံ</label>
+							<h:inputTextarea value="" styleClass="materialize-textarea"></h:inputTextarea>
+						</div>
+						<div class="right MarTop10">
+							<h:link value="မတင်သေးပါ" outcome="/public/desire-list" styleClass="btn red lighten-2 MarRight10"/>
+							<h:link value="တင်မည်" outcome="/public/desire-list" styleClass="btn MarRight10 cyan" />
+						</div> 
+					</div>
+				<script>
+					$(function(){
+						$('.datepicker').pickadate({
+							selectYears:true,
+							selectYear:3
+						});
+					});
+				</script>	
+			<div id="messageModal" class="modal bottom-sheet green lighten-4">
+					<div class="row">
+						<div class="col offset-l2 l8 ">
+							<div class="modal-content">
+								<h:form>
+									<div class="input-field">
+										<label>ဖုန်းနံပါတ်အသစ်ထည့်ရန်</label>
+										<h:inputText styleClass="materialize-text" value="" />
+									</div>
+								</h:form>
+							</div>
+							<div class="modal-footer green lighten-4">
+								<a href="#!"
+									class=" modal-action modal-close waves-effect waves-green btn-flat">ပိတ်မည်</a>
+								<a href="#!"
+									class=" modal-action modal-close waves-effect waves-green btn-flat">ထည့်မည်</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<script>
+					$(function() {
+						$('.modal').modal();
+					});
+				</script>
 		</ui:define>
 	</ui:composition>
 </html>

@@ -2,15 +2,99 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:h="http://java.sun.com/jsf/html">
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
 
 	<ui:composition template="/WEB-INF/template.xhtml">
 		<ui:define name="title">
-			အသေးစိတ်
+			ကိုယ်ရေးအကျဉ်း	
 		</ui:define>
 		
 		<ui:define name="content">
-		
+		<h:form id="profileForm" enctype="multipart/form-data">
+			<div class="btn btn-floating MarRight10"><i class="material-icons">account_circle</i></div>
+					<span class="fs22" >ကိုယ်ရေးအကျဉ်း</span>
+					<div class="divider MarTop10"></div>
+					<div class="row MarTop20">
+						<div class="col l3 s12">
+							<h:graphicImage library="img" name="user.png" styleClass="responsive-img img-thumbnail tooltipped" 
+							p:data-position="bottom" p:data-delay="50" p:data-tooltip="Upload Photo"
+							id="profileImage" onclick="clickImage()"/>
+						</div>
+						<div class="col l9 s12">
+							<div class="input-field col l6 s12">
+							<i class="material-icons prefix">person</i>
+							<label>နာမည်</label>
+							<h:inputText value="ဦးမောင်မောင်" />
+						</div>
+						<div class="input-field col l6 s12">
+							<i class="material-icons prefix">assignment_ind</i>
+							<label>အဖွဲ့ဝင်အမှတ်</label>
+							<h:inputText value="mgmg"/>
+						</div>
+						<div class="input-field col l6 s12">
+							<i class="material-icons prefix">assignment</i>
+							<label>အကျိုးဆောင်နာမည်</label>
+							<h:inputText value="အေစိုးအိုင်စီ အေဂျင်စီ"/>
+						</div>
+						
+						<div class="input-field col l6 s12">
+							<i class="material-icons prefix">email</i>
+							<label>အီးမေးလ်</label>
+							<h:inputText value="mgmg@gmail.com" />
+						</div>
+						<div class="input-field col l6 s8">
+							<i class="material-icons prefix">dialer_sip</i>
+							<label>ဖုန်းနံပါတ်</label>
+							<h:inputText value="09-974774848" />
+						</div>
+						<div class=" col l6 s4 MarTop10">
+							<a href="#phoneModel" class="btn btn-floating green white-text modal-trigger">
+								<i class="material-icons">add</i>
+							</a>
+						</div>
+						
+						<div class="input-field col s12">
+							<i class="material-icons prefix">place</i>
+							<label>လိပ်စာအပြည့်အစုံ</label>
+							<h:inputTextarea value="အမှတ်(၁၀၅)၊စမ်းချောင်းမြို့နယ်၊ရန်ကုန်တိုင်း" styleClass="materialize-textarea"></h:inputTextarea>
+						</div>
+						<div class="right MarTop10">
+							<h:link value="တင်မည်" outcome="/public/desire-list" styleClass="btn MarRight10 cyan" />
+						</div> 
+						</div>
+						
+					</div>
+					
+				<div id="phoneModel" class="modal bottom-sheet green lighten-4">
+					<div class="row">
+						<div class="col offset-l2 l8 ">
+							<div class="modal-content">
+								<h:form>
+									<div class="input-field">
+										<label>ဖုန်းနံပါတ်အသစ်ထည့်ရန်</label>
+										<h:inputText styleClass="materialize-text" value="" />
+									</div>
+								</h:form>
+							</div>
+							<div class="modal-footer green lighten-4">
+								<a href="#!"
+									class=" modal-action modal-close waves-effect waves-green btn-flat">ပိတ်မည်</a>
+								<a href="#!"
+									class=" modal-action modal-close waves-effect waves-green btn-flat">ထည့်မည်</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</h:form>
+			<script>
+				$(function() {
+					$('.modal').modal();
+				});
+				function clickImage() {
+					$("#profileForm input[type=file]").click();
+				}
+			</script>
 		</ui:define>
 	</ui:composition>
 </html>

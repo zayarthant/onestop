@@ -10,7 +10,38 @@
 		</ui:define>
 		
 		<ui:define name="content">
-		
+			<div class="btn btn-floating MarRight10"><i class="material-icons">person</i></div>
+			<h:outputLabel value="ဦးမောင်မောင်" styleClass="fs22 grey-text" />
+			<h:link outcome="/member/profile-edit" styleClass="btn btn-floating right">
+				<i class="material-icons">edit</i>
+			</h:link>
+			<div class="divider MarTop10"></div>
+			
+			<div class="row MarTop10">
+				<div class="col s6 l4">
+					<h:graphicImage library="img" name="user.png" styleClass="responsive-img img-thumbnail"/>
+				</div>
+				<div class="col s6 l8">
+					<h:panelGrid columns="2" styleClass="table" columnClasses="colLabel,colDetails">
+						<h:outputText value="အကျိုးဆောင်" />
+						<h:link outcome="/public/company" value="အေစိုးအိုင်စီ အေဂျင်စီ " />
+					
+						<h:outputText value="အဖွဲ့ဝင်နံပါတ်" />
+						<h:outputText value="mgmg" />
+						
+						<h:outputText value="ဖုန်းနံပါတ်" />
+						<h:outputText value="၀၉-၉၇၄၇၄၃၈၇၃၄၊ ၀၉-၈၄၈၈၄၈၈၄" />
+						
+						<h:outputText value="အီးမေးလ်" />
+						<h:outputText value="mgmg@gmail.com" />
+						
+						<h:outputText value="လိပ်စာ" />
+						<h:outputText value="အမှတ်(၁၀၅)၊စမ်းချောင်းမြို့နယ်၊ရန်ကုန်တိုင်း" />
+	
+					</h:panelGrid>
+				</div>
+			</div>
+			
 		</ui:define>
 	</ui:composition>
 </html>
