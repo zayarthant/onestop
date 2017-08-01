@@ -3,7 +3,8 @@
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:home="http://java.sun.com/jsf/composite/home"
-      xmlns:h="http://java.sun.com/jsf/html">
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
 
 	<ui:composition template="/WEB-INF/template.xhtml">
 		<ui:define name="title">အကျိုးဆောင်</ui:define>
@@ -24,6 +25,9 @@
 				</li>
 				<li class="tab col s3">
 					<a href="#tab4">အငှား</a>
+				</li>
+				<li class="tab col s3">
+					<a href="#tab5">အဖွဲ့ဝင်များ</a>
 				</li>
 			</ul>
 
@@ -88,6 +92,73 @@
 				</div>
 			
 			</div>
+			
+			<!-- Member -->
+			<div class="row MarTop20" id="tab5">
+			 	<div class="col s12">
+			 		<div class="row">
+			 			<div class="input-field col s12">
+			 				<h:inputText value="" styleClass="col s8 l4"/>
+							<label>အဖွဲ့ဝင်နာမည်ဖြင့်ရှာဖွေရန်</label>
+							<h:link outcome="#"  styleClass="btn btn-floating MarRight10">
+								<i class="material-icons">search</i>
+							</h:link>
+							<h:link outcome="#"  styleClass="btn btn-floating tooltipped" 
+								rendered="#{(loginUser.role eq 'Admin') or (loginUser.role eq 'Member')}"
+							p:data-position="bottom" p:data-delay="50" p:data-tooltip="အဖွဲ့ဝင်အသစ်ထည့်ရန်">
+								<i class="material-icons">add</i>
+							</h:link>
+			 			</div>
+			 		</div>
+				
+						<div class="card">
+							<div class="row ">
+								<div class="col s12 l3 card-image">
+									<h:graphicImage library="img" name="user.png" />
+								</div>
+								<div class="card-stacked col s12 l9">
+									<h:panelGrid columns="2" styleClass="table" columnClasses="">
+										<h:outputText value="အဖွဲ့ဝင်နာမည်" />
+										<h:outputText value="ဦးမောင်မောင်" />
+									
+										<h:outputText value="အကျိုးဆောင်" />
+										<h:link outcome="/public/company" value="အေစိုးအိုင်စီ အေဂျင်စီ " />
+									
+										<h:outputText value="ဖုန်းနံပါတ်" />
+										<h:outputText value="၀၉-၉၇၄၇၄၃၈၇၃၄၊ ၀၉-၈၄၈၈၄၈၈၄" />
+									</h:panelGrid>
+									<h:link outcome="/member/message-details" value="အဖွဲ့ဝင်အဖြစ်ထည့်ရန်" 
+									rendered="#{(loginUser.role eq 'Admin') or (loginUser.role eq 'Member')}"
+									styleClass="chip green-text MarRight10 MarTop10"/>
+							         <h:link outcome="/member/profile" value="အသေးစိတ်ကြည့်ရန်" styleClass="chip red-text MarTop10"/>
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="row ">
+								<div class="col s12 l3 card-image">
+									<h:graphicImage library="img" name="user.png" />
+								</div>
+								<div class="card-stacked col s12 l9">
+									<h:panelGrid columns="2" styleClass="table" columnClasses="">
+										<h:outputText value="အဖွဲ့ဝင်နာမည်" />
+										<h:outputText value="ဦးမောင်မောင်" />
+									
+										<h:outputText value="အကျိုးဆောင်" />
+										<h:link outcome="/public/company" value="အေစိုးအိုင်စီ အေဂျင်စီ " />
+									
+										<h:outputText value="ဖုန်းနံပါတ်" />
+										<h:outputText value="၀၉-၉၇၄၇၄၃၈၇၃၄၊ ၀၉-၈၄၈၈၄၈၈၄" />
+									</h:panelGrid>
+									<h:link outcome="/member/message-details" value="အဖွဲ့ဝင်အဖြစ်ထည့်ရန်" 
+									rendered="#{(loginUser.role eq 'Admin') or (loginUser.role eq 'Member')}"
+									styleClass="chip green-text MarRight10 MarTop10"/>
+							         <h:link outcome="/member/profile" value="အသေးစိတ်ကြည့်ရန်" styleClass="chip red-text MarTop10"/>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 
 		</ui:define>
 	</ui:composition>
