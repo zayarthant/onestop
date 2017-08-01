@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+	<ui:composition template="/WEB-INF/template.xhtml">
+	<ui:define name="title"> ပုံများ</ui:define>
+	<ui:define name="content">
+		<div class="btn btn-floating"><i class="material-icons prefix">domain</i> </div>
+		<span class="fs22" >ဓါတ်ပုံများ </span>
+		<div class="divider MarTop10"></div>
+		
+		<h:form styleClass="file-field">	
+			     
+		      <div class="file-path-wrapper input-field col s10 ">
+		      	<i class="material-icons prefix">photo</i>	
+		      	<label style="margin-top: 10px" >ဓါတ်ပုံ</label>	      
+		        <input class="file-path validate" type="text"></input>		        
+		      </div>
+		      <div class="input-field col s2">
+		      	<div class="btn btn-block pull-right" > <input type="file" >ဖိုင်</input> </div>		      	
+		      </div>
+		 	   
+		</h:form> 
+		<h:form styleClass="MarTop20 col s12">				
+			<h:commandButton action="#" value="သိမ်းမည်" styleClass="btn btn-block pull-right" />
+			<h:commandButton action="#" value="မသိမ်းပါ" styleClass="btn red lighten-2 MarRight10 pull-right" />
+			<h:commandButton action="other" value="နောက်စာမျက်နှာ" styleClass="btn btn-flat pull-left"/>	
+		</h:form>
+	</ui:define>
+	</ui:composition>
+</html>

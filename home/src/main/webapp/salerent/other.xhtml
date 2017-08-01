@@ -9,33 +9,51 @@
 	<ui:define name="title"> အခြား </ui:define>
 	<ui:define name="content">
 		<div class="btn btn-floating"><i class="material-icons prefix">domain</i> </div>
-		<span class="fs22" >အခြာ:ပါဝင်သောအရာများနှင့်ဓါတ်ပုံများ </span>
+		<span class="fs22" >အခြာ:ပါဝင်သောအရာများ </span>
 		<div class="divider MarTop10"></div>
 		<h:form>
+			<div class="row" >
+			<div class="input-field col s4">
+			<input type="checkbox" id="test1" />
+      		<label for="test1">ခေတ်မှီ မီးဖိုချောင်စနစ် </label>
+      		</div>
+      		<div class="input-field col s4">
+      		<input type="checkbox" id="test2" />
+      		<label for="test2">ကားပါကင်ပါသည် </label>
+			</div>
+			<div class="input-field col s4">
+      		<input type="checkbox" id="test3" />
+      		<label for="test3">လုံခြံရေးစနစ်တတ်ဆင်ပြီး </label>
+			</div>
+			</div>
+			
+			<div class="row" >
+			<div class="input-field col s4">
+			<input type="checkbox" id="test4" />
+      		<label for="test4">၂၄နာရီစတိုးဆိုင်အနီး </label>
+      		</div>
+      		<div class="input-field col s4">
+      		<input type="checkbox" id="test5" />
+      		<label for="test5">ကားမှတ်တိုင်မှ လမ်းလျောက်၅ မိနစ် </label>
+			</div>
+			<div class="input-field col s4">
+      		<input type="checkbox" id="test6" />
+      		<label for="test6">ဝရန်တာ </label>
+			</div>
+			</div>
+			
+			<div class="row" >
 			<div class="input-field col s10">
 				<i class="material-icons prefix">playlist_add</i>
-				<label>အခြာ:ပါဝင်သောအရာ</label>
+				<label>အခြာ:ထပ်ထည့်ရန်</label>
 				<h:inputText />
 			</div>
 			<div class="input-field col s2">
 				<h:commandButton action="#" value="ထည့်မည်" styleClass="btn btn-block pull-right" />
 			</div>
-		</h:form>
-		
-		<h:form styleClass="file-field">		     
-		      <div class="file-path-wrapper input-field col s10 ">
-		      	<i class="material-icons prefix">photo</i>	
-		      	<label>ဓါတ်ပုံ</label>	      
-		        <input class="file-path validate" type="text"></input>		        
-		      </div>
-		      <div class="input-field col s2 ">
-		      	<div class="btn btn-block pull-right" > <input type="file">ဖိုင်</input> </div>
-		      </div>	   
-		</h:form>  
-		
-		<h:form styleClass="MarTop20 col s12">			
-			<h:commandButton action="#" value="သိမ်းမည်" styleClass="btn btn-block pull-right" />
-			<h:commandButton action="#" value="မသိမ်းပါ" styleClass="btn red lighten-2 MarRight10 pull-right" />
+			</div>
+			<h:commandButton action="photo" value="ရှေ့စာမျက်နှာ" styleClass="btn btn-flat pull-right"/>
+			<h:commandButton action="information" value="နောက်စာမျက်နှာ" styleClass="btn btn-flat pull-left"/>
 		</h:form>
 		
 	</ui:define>
