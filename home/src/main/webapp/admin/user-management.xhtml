@@ -3,6 +3,7 @@
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
       xmlns:home="http://java.sun.com/jsf/composite/home">
 
 	<ui:composition template="/WEB-INF/template.xhtml">
@@ -11,16 +12,27 @@
 		</ui:define>
 		
 		<ui:define name="content">
-			<div class="card white hoverable">
-			
+		<div class="card white hoverable">
 				<div class="card-content green lighten-4">
 					<span class="card-title">အဖွဲ့ဝင်ရှာဖွေရန်</span>
 					<h:link rendered="#{loginUser.role eq 'Member'}" outcome="/member/company-edit" styleClass="btn btn-floating right green darken-3"><i class="material-icons">add</i></h:link>
 				</div>
 				<div class="card-content">
-					<home:search-member></home:search-member>
+					<div class="row">
+			 			<div class="input-field col s12">
+			 				<h:inputText value="" styleClass="col s8 l4"/>
+							<label>အဖွဲ့ဝင်နာမည်ဖြင့်ရှာဖွေရန်</label>
+							<h:link outcome="#"  styleClass="btn btn-floating MarRight10">
+								<i class="material-icons">search</i>
+							</h:link>
+							<h:link outcome="#"  styleClass="btn btn-floating tooltipped" 
+								rendered="#{(loginUser.role eq 'Admin') or (loginUser.role eq 'Member')}"
+								p:data-position="bottom" p:data-delay="50" p:data-tooltip="အဖွဲ့ဝင်အသစ်ထည့်ရန်">
+								<i class="material-icons">add</i>
+							</h:link>
+			 			</div>
+			 		</div>
 				</div>
-				
 			</div>
 			<br/>
 			<div class="row">	

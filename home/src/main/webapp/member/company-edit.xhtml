@@ -56,9 +56,9 @@
 							<h:inputText value="" />
 						</div>
 						<div class="input-field col l6 s3">
-							<a href="#messageModal" class="btn btn-floating green white-text modal-trigger">
-								<i class="material-icons">add</i>
-							</a>
+							<i class="material-icons prefix">email</i>
+							<label>အီးမေးလ်</label>
+							<h:inputText value="" />
 						</div>
 						<div class="input-field col s12">
 							<i class="material-icons prefix">beenhere</i>
@@ -83,31 +83,7 @@
 						});
 					});
 				</script>	
-			<div id="messageModal" class="modal bottom-sheet green lighten-4">
-					<div class="row">
-						<div class="col offset-l2 l8 ">
-							<div class="modal-content">
-								<h:form>
-									<div class="input-field">
-										<label>ဖုန်းနံပါတ်အသစ်ထည့်ရန်</label>
-										<h:inputText styleClass="materialize-text" value="" />
-									</div>
-								</h:form>
-							</div>
-							<div class="modal-footer green lighten-4">
-								<a href="#!"
-									class=" modal-action modal-close waves-effect waves-green btn-flat">ပိတ်မည်</a>
-								<a href="#!"
-									class=" modal-action modal-close waves-effect waves-green btn-flat">ထည့်မည်</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<script>
-					$(function() {
-						$('.modal').modal();
-					});
-				</script>
+			
 		</ui:define>
 	</ui:composition>
 </html>
