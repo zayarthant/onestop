@@ -1,4 +1,4 @@
-package com.jdc.home.beans;
+package com.jdc.home.controller;
 
 import javax.enterprise.event.Event;
 import javax.enterprise.inject.Model;

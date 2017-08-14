@@ -1,20 +1,16 @@
 package com.jdc.home.domain;
 
-import java.io.Serializable;
-
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
-import javax.persistence.Id;
 import javax.persistence.PrePersist;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
 @SuppressWarnings("serial")
-public class Member implements Serializable {
+public class Member extends PropertyOwner {
 
-	@Id
 	@NotEmpty(message="Please enter login Id")
 	private String loginId;
 	@NotEmpty(message="Please enter password")

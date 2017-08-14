@@ -1,4 +1,4 @@
-package com.jdc.home.beans;
+package com.jdc.home.controller;
 
 import java.io.Serializable;
 
